@@ -2,7 +2,7 @@
 #include <vector>
 #include <string>
 
-#include "ZUC.h"
+#include "include/ZUC.h"
 
 int main(int argc, char *argv[]) {
     unsigned char iv[16] = {0x84, 0x31, 0x9a, 0xa8, 0xde, 0x69, 0x15, 0xca, 0x1f, 0x6b, 0xda, 0x6b, 0xfb, 0xd8, 0xc7,
@@ -18,10 +18,10 @@ int main(int argc, char *argv[]) {
     unsigned char *key = (unsigned char *) key_string.c_str();
 
     // how many keys are generated
-    int keyStreamSize = 512;
+    int keyStreamSize = 16;
 
     // save keys to pKeyStream[]
-    unsigned int *pKeyStream = new unsigned int[keyStreamSize];
+    vector<uint32> pKeyStream(keyStreamSize);
 
     // initialize
     Initialization(key, iv);
