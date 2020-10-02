@@ -5,7 +5,7 @@
 
 using namespace std;
 typedef unsigned int uint32;
-
+typedef unsigned char u8;
 /* state registers LFSR */
 unsigned int LFSR_S[16];
 
@@ -175,7 +175,7 @@ unsigned int F(void) {
     | (unsigned char)(c)))
 
 
-void Initialization(unsigned char *k, unsigned char *iv) {
+void Initialization(u8 *k, u8 *iv) {
     unsigned int w;
 
     /* expand key */

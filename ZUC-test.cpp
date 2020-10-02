@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
         return -1;
     }
     // convert to C type
-    unsigned char *key = (unsigned char *) key_string.c_str();
+    u8 *key = (u8 *) key_string.c_str();
 
     // how many keys are generated
     int keyStreamSize = 16;
